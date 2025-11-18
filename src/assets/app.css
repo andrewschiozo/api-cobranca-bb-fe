@@ -1,0 +1,15 @@
+:root {
+  --yellow: #aaa;
+  --blue: #bbb;
+  --dark-blue: #0c091a;
+  --primary-blue: #382866;
+}
+
+* {
+  color: var(--primary-blue);
+  font-family: sans-serif;
+}
+
+body {
+  margin: 4px;
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="53" viewBox="0 0 50 53">
+  <defs>
+    <clipPath id="clip-img_web_logo_BB_2">
+      <rect width="50" height="53"/>
+    </clipPath>
+  </defs>
+  <g id="img_web_logo_BB_2" clip-path="url(#clip-img_web_logo_BB_2)">
+    <g id="Grupo_1954" data-name="Grupo 1954" transform="translate(-120 -29)">
+      <g id="Logo_BB" data-name="Logo BB" transform="translate(120 30)">
+        <path id="Caminho_1" data-name="Caminho 1" d="M423.577,423.5l-5-3.361,23.75-16.076-14.681-9.9-6.888,4.67,5.352,3.546-12.356,8.287L403.417,403.8l24.89-16.656,24.718,16.614Zm9.356-22.8,5,3.367-23.752,16.073,14.672,9.906,6.9-4.671-5.354-3.547,12.361-8.284L453.1,420.4l-24.985,16.651-24.65-16.535Zm-19.369,29.756-5.1-3.478-5.16,3.486.052,6.74ZM443.164,394l5.119,3.507,5.01-3.345.008-6.879Z" transform="translate(-403.301 -387.144)" fill="#ffed00" opacity="0.7"/>
+      </g>
+    </g>
+  </g>
+</svg>

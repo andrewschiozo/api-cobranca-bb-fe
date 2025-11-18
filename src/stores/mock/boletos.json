@@ -1,0 +1,16 @@
+[
+  {
+    "numeroConvenio": 34551,
+    "dataVencimento": "2025-11-18T21:20:41.125Z",
+    "valorTitulo": 123.45,
+    "nossoNumero": 102031,
+    "status": "pendente"
+  },
+  {
+    "numeroConvenio": 34551,
+    "dataVencimento": "2025-11-17T16:30:00.125Z",
+    "valorTitulo": 123.44,
+    "nossoNumero": 102030,
+    "status": "registrado"
+  }
+]

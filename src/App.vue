@@ -1,11 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AppHeader from './components/layout/AppHeader.vue'
+import BoletosPage from './pages/BoletosPage.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <AppHeader />
+  <div style="padding: 5px 10px">
+    <BoletosPage />
+  </div>
 </template>
 
 <style scoped></style>

@@ -1,58 +1,74 @@
 <template>
-  <section>
-    <h2>Boletos</h2>
-    <div class="card">
-      <button v-on:click="all()">Todos</button>
-      <button v-on:click="pendentes()">Pendentes</button>
+  <article>
+    <header>
+      <h2>Boletos</h2>
+    </header>
+
+    <div class="tools">
+      <MultiSelect
+        item-name="status"
+        :items="boletosStore.allStatus()"
+        ref="statusSelectRef"
+        style="width: 300px"
+      />
+      <button v-on:click="filtrar">Filtrar</button>
     </div>
-    <ul>
-      <li v-for="boleto in boletosPagina" :key="boleto.nossoNumero">
-        {{ boleto.nossoNumero }} | {{ boleto.status }} |
-        {{ new Date(boleto.dataVencimento).toLocaleDateString() }}
-      </li>
-    </ul>
-  </section>
+
+    <div class="table-container overflow-auto">
+      <BoletoTabela :boletos="boletos" />
+    </div>
+
+    <p class="text-end">{{ boletos.length }} registros</p>
+  </article>
 </template>
 
 <script setup lang="ts">
+import BoletoTabela from '@/components/boleto/BoletoTabela.vue'
+import MultiSelect from '@/components/ui/MultiSelect.vue'
 import { useBoletosStore } from '@/stores/boletos'
 import type { BoletoType } from '@/types/BoletoType'
 import { ref, type Ref } from 'vue'
 
 const boletosStore = useBoletosStore()
-const boletosPagina = ref([]) as Ref<BoletoType[]>
-boletosPagina.value = boletosStore.all()
+const boletos = ref([]) as Ref<BoletoType[]>
+boletos.value = boletosStore.all()
 
-function all() {
-  boletosPagina.value = boletosStore.all()
-}
+const statusSelectRef = ref<typeof MultiSelect | null>(null)
 
-function pendentes() {
-  boletosPagina.value = boletosStore.filter('pendente')
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
+function filtrar() {
+  if (statusSelectRef.value) {
+    const selectedStatus: string[] = statusSelectRef.value.selectedItems()
+    if (selectedStatus.length === 0) {
+      alert('Selecione ao menos status')
+      return
+    }
+
+    boletos.value = []
+    sleep(500).then(() => (boletos.value = boletosStore.filterStatus(selectedStatus)))
+  }
 }
 </script>
 
 <style scoped>
-.card {
-  border-radius: 5px;
-  border: 1px solid var(--dark-blue);
-  padding: 10px 5px;
+.tools {
+  display: flex;
+  gap: 2;
+  justify-content: flex-end;
 
-  & button:first-child {
-    margin-left: 0;
+  &:first-child {
+    border: 10px solid white;
+  }
+
+  & button {
+    margin-bottom: 21px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
 
-.card button {
-  padding: 5px;
-  min-width: 80px;
-  margin-left: 10px;
-  background-color: transparent;
-  border: 1px solid var(--dark-blue);
-
-  &:hover {
-    background-color: var(--primary-blue);
-    color: #fff;
-  }
+.table-container {
+  height: 400px;
 }
 </style>

@@ -1,16 +1,50 @@
 [
   {
     "numeroConvenio": 34551,
-    "dataVencimento": "2025-11-18T21:20:41.125Z",
-    "valorTitulo": 123.45,
-    "nossoNumero": 102031,
-    "status": "pendente"
+    "dataVencimento": "2025-11-18",
+    "valorTitulo": 314.15,
+    "nossoNumero": 102033,
+    "status": "pendente",
+    "pagador": {
+      "nome": "Pagador 1",
+      "numeroDocumento": "816.760.090.001-19",
+      "cep": "1000000"
+    }
   },
   {
     "numeroConvenio": 34551,
-    "dataVencimento": "2025-11-17T16:30:00.125Z",
-    "valorTitulo": 123.44,
+    "dataVencimento": "2025-11-15",
+    "valorTitulo": 111.21,
+    "nossoNumero": 102032,
+    "status": "registrado",
+    "pagador": {
+      "nome": "Pagador 1",
+      "numeroDocumento": "816.760.090.001-19",
+      "cep": "1000000"
+    }
+  },
+  {
+    "numeroConvenio": 34551,
+    "dataVencimento": "2025-11-10",
+    "valorTitulo": 678.9,
+    "nossoNumero": 102031,
+    "status": "cancelado",
+    "pagador": {
+      "nome": "Pagador 1",
+      "numeroDocumento": "816.760.090.001-19",
+      "cep": "1000000"
+    }
+  },
+  {
+    "numeroConvenio": 34551,
+    "dataVencimento": "2025-11-10",
+    "valorTitulo": 123.45,
     "nossoNumero": 102030,
-    "status": "registrado"
+    "status": "pago",
+    "pagador": {
+      "nome": "Pagador 1",
+      "numeroDocumento": "816.760.090.001-19",
+      "cep": "1000000"
+    }
   }
 ]

@@ -5,9 +5,9 @@ import BoletosPage from './pages/BoletosPage.vue'
 
 <template>
   <AppHeader />
-  <div style="padding: 5px 10px">
+  <section style="margin-top: 20px">
     <BoletosPage />
-  </div>
+  </section>
 </template>
 
 <style scoped></style>

@@ -1,15 +1,18 @@
-:root {
-  --yellow: #aaa;
-  --blue: #bbb;
-  --dark-blue: #0c091a;
-  --primary-blue: #382866;
+@import url('@picocss/pico/css/pico.min.css');
+@import url('@picocss/pico/css/pico.colors.min.css');
+
+.text-start {
+  text-align: start;
+}
+.text-center {
+  text-align: center;
+}
+.text-end {
+  text-align: end;
 }
 
-* {
-  color: var(--primary-blue);
-  font-family: sans-serif;
-}
-
-body {
-  margin: 4px;
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
